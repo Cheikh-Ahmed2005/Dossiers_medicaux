@@ -1,0 +1,76 @@
+<div class="page-content">
+  @if (patient()) {
+    <div class="d-flex align-items-center mb-4">
+      <a routerLink="/patients" class="btn btn-outline-secondary btn-sm me-3">&#8592; Retour</a>
+      <h4 class="fw-bold mb-0">Dossier : {{ patient()!.nom }} {{ patient()!.prenom }}</h4>
+      <a [routerLink]="['/patients', patient()!.id, 'edit']" class="btn btn-outline-warning btn-sm ms-3">&#9999; Modifier</a>
+    </div>
+
+    <div class="row g-3">
+      <!-- Infos patient -->
+      <div class="col-md-4">
+        <div class="card h-100">
+          <div class="card-header fw-bold bg-primary text-white">&#128101; Informations personnelles</div>
+          <div class="card-body">
+            <dl class="row mb-0">
+              <dt class="col-5 text-muted">Nom</dt>
+              <dd class="col-7">{{ patient()!.nom }}</dd>
+              <dt class="col-5 text-muted">Prénom</dt>
+              <dd class="col-7">{{ patient()!.prenom }}</dd>
+              <dt class="col-5 text-muted">Naissance</dt>
+              <dd class="col-7">{{ patient()!.dateNaissance | date:'dd/MM/yyyy' }}</dd>
+              <dt class="col-5 text-muted">Sexe</dt>
+              <dd class="col-7">{{ patient()!.sexe === 'M' ? 'Masculin' : 'Féminin' }}</dd>
+              <dt class="col-5 text-muted">Téléphone</dt>
+              <dd class="col-7">{{ patient()!.telephone || '-' }}</dd>
+              <dt class="col-5 text-muted">Adresse</dt>
+              <dd class="col-7">{{ patient()!.adresse || '-' }}</dd>
+              <dt class="col-5 text-muted">Groupe sanguin</dt>
+              <dd class="col-7">
+                @if (patient()!.groupeSanguin) {
+                  <span class="badge bg-danger">{{ patient()!.groupeSanguin }}</span>
+                } @else { - }
+              </dd>
+              <dt class="col-5 text-muted">Allergies</dt>
+              <dd class="col-7">{{ patient()!.allergies || 'Aucune' }}</dd>
+            </dl>
+          </div>
+        </div>
+      </div>
+
+      <!-- Historique consultations -->
+      <div class="col-md-8">
+        <div class="card">
+          <div class="card-header fw-bold bg-success text-white d-flex justify-content-between">
+            <span>&#129658; Historique des consultations ({{ consultations().length }})</span>
+            <a routerLink="/consultations/new" class="btn btn-sm btn-light">+ Nouvelle</a>
+          </div>
+          <div class="card-body p-0">
+            @if (consultations().length === 0) {
+              <div class="text-center py-4 text-muted">Aucune consultation enregistrée</div>
+            } @else {
+              <div class="list-group list-group-flush">
+                @for (c of consultations(); track c.id) {
+                  <div class="list-group-item">
+                    <div class="d-flex justify-content-between">
+                      <span class="fw-semibold">Dr. {{ c.medecin.nom }} {{ c.medecin.prenom }}</span>
+                      <span class="text-muted small">{{ c.dateConsultation | date:'dd/MM/yyyy HH:mm' }}</span>
+                    </div>
+                    @if (c.diagnostic) {
+                      <div class="small mt-1"><strong>Diagnostic :</strong> {{ c.diagnostic }}</div>
+                    }
+                    @if (c.traitement) {
+                      <div class="small"><strong>Traitement :</strong> {{ c.traitement }}</div>
+                    }
+                  </div>
+                }
+              </div>
+            }
+          </div>
+        </div>
+      </div>
+    </div>
+  } @else {
+    <div class="text-center py-5"><div class="spinner-border text-primary"></div></div>
+  }
+</div>

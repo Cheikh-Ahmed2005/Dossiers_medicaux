@@ -1,0 +1,102 @@
+<div class="page-content">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+      <h4 class="fw-bold mb-0">Tableau de bord</h4>
+      <p class="text-muted small mb-0">Bienvenue, <strong>{{ user()?.username }}</strong> ({{ role() }})</p>
+    </div>
+    <span class="text-muted small">{{ today | date:'dd MMMM yyyy' }}</span>
+  </div>
+
+  @if (stats()) {
+    <div class="row g-3 mb-4">
+      <div class="col-md-3">
+        <div class="stat-card" style="background:linear-gradient(135deg,#1a6b9a,#0d4f75)">
+          <div class="d-flex justify-content-between align-items-start">
+            <div>
+              <div class="fs-1 fw-bold">{{ stats()!.totalPatients }}</div>
+              <div class="opacity-75">Patients</div>
+            </div>
+            <span style="font-size:2.5rem">&#128101;</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="stat-card" style="background:linear-gradient(135deg,#28a745,#1e7e34)">
+          <div class="d-flex justify-content-between align-items-start">
+            <div>
+              <div class="fs-1 fw-bold">{{ stats()!.totalConsultations }}</div>
+              <div class="opacity-75">Consultations</div>
+            </div>
+            <span style="font-size:2.5rem">&#129658;</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="stat-card" style="background:linear-gradient(135deg,#fd7e14,#e8590c)">
+          <div class="d-flex justify-content-between align-items-start">
+            <div>
+              <div class="fs-1 fw-bold">{{ stats()!.totalRendezVous }}</div>
+              <div class="opacity-75">Rendez-vous</div>
+            </div>
+            <span style="font-size:2.5rem">&#128197;</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="stat-card" style="background:linear-gradient(135deg,#6f42c1,#4e2d8b)">
+          <div class="d-flex justify-content-between align-items-start">
+            <div>
+              <div class="fs-1 fw-bold">{{ stats()!.totalMedecins }}</div>
+              <div class="opacity-75">Médecins</div>
+            </div>
+            <span style="font-size:2.5rem">&#129657;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    @if (role() === 'ADMIN') {
+      <div class="row g-3">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h6 class="fw-bold mb-3">&#128197; Informations générales</h6>
+              <div class="list-group list-group-flush">
+                <div class="list-group-item d-flex justify-content-between px-0">
+                  <span>Services hospitaliers</span>
+                  <span class="badge bg-primary rounded-pill">{{ stats()!.totalServices }}</span>
+                </div>
+                <div class="list-group-item d-flex justify-content-between px-0">
+                  <span>Utilisateurs actifs</span>
+                  <span class="badge bg-success rounded-pill">{{ stats()!.totalUtilisateurs }}</span>
+                </div>
+                <div class="list-group-item d-flex justify-content-between px-0">
+                  <span>Total patients</span>
+                  <span class="badge bg-info rounded-pill">{{ stats()!.totalPatients }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h6 class="fw-bold mb-3">&#9889; Accès rapides</h6>
+              <div class="d-grid gap-2">
+                <a routerLink="/patients" class="btn btn-outline-primary btn-sm">&#128101; Gérer les patients</a>
+                <a routerLink="/medecins" class="btn btn-outline-success btn-sm">&#129657; Gérer les médecins</a>
+                <a routerLink="/services" class="btn btn-outline-info btn-sm">&#127973; Gérer les services</a>
+                <a routerLink="/users" class="btn btn-outline-secondary btn-sm">&#128272; Gérer les utilisateurs</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    }
+  } @else {
+    <div class="text-center py-5">
+      <div class="spinner-border text-primary"></div>
+      <p class="mt-2 text-muted">Chargement des statistiques...</p>
+    </div>
+  }
+</div>

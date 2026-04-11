@@ -1,0 +1,52 @@
+<div class="page-content">
+  <div class="d-flex align-items-center mb-4">
+    <a routerLink="/consultations" class="btn btn-outline-secondary btn-sm me-3">&#8592; Retour</a>
+    <h4 class="fw-bold mb-0">{{ isEdit ? 'Modifier la consultation' : 'Nouvelle consultation' }}</h4>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <form (ngSubmit)="save()" #f="ngForm">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">Patient <span class="text-danger">*</span></label>
+            <select class="form-select" [(ngModel)]="form.patientId" name="patientId" required>
+              <option [value]="null">-- Sélectionner un patient --</option>
+              @for (p of patients(); track p.id) {
+                <option [value]="p.id">{{ p.nom }} {{ p.prenom }}</option>
+              }
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label class="form-label fw-semibold">Médecin <span class="text-danger">*</span></label>
+            <select class="form-select" [(ngModel)]="form.medecinId" name="medecinId" required>
+              <option [value]="null">-- Sélectionner un médecin --</option>
+              @for (m of medecins(); track m.id) {
+                <option [value]="m.id">Dr. {{ m.nom }} {{ m.prenom }} ({{ m.specialite }})</option>
+              }
+            </select>
+          </div>
+          <div class="col-12">
+            <label class="form-label fw-semibold">Diagnostic</label>
+            <textarea class="form-control" rows="3" [(ngModel)]="form.diagnostic" name="diagnostic"></textarea>
+          </div>
+          <div class="col-12">
+            <label class="form-label fw-semibold">Traitement prescrit</label>
+            <textarea class="form-control" rows="3" [(ngModel)]="form.traitement" name="traitement"></textarea>
+          </div>
+          <div class="col-12">
+            <label class="form-label fw-semibold">Notes médicales</label>
+            <textarea class="form-control" rows="3" [(ngModel)]="form.notes" name="notes"></textarea>
+          </div>
+        </div>
+        <div class="d-flex gap-2 mt-4">
+          <button type="submit" class="btn btn-primary px-4" [disabled]="loading() || !f.valid">
+            @if (loading()) { <span class="spinner-border spinner-border-sm me-2"></span> }
+            Enregistrer
+          </button>
+          <a routerLink="/consultations" class="btn btn-light px-4">Annuler</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

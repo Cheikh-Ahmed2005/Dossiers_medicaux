@@ -1,0 +1,110 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+/* Global Styles */
+:root {
+  --primary: #1a6b9a;
+  --secondary: #28a745;
+  --accent: #17a2b8;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f7fa;
+}
+
+.sidebar {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #1a6b9a 0%, #0d4f75 100%);
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.15);
+}
+
+.sidebar .nav-link {
+  color: rgba(255,255,255,0.8);
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  margin: 2px 8px;
+  transition: all 0.2s;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+}
+
+.sidebar .nav-link i {
+  width: 20px;
+  margin-right: 8px;
+}
+
+.main-content {
+  margin-left: 250px;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.topbar {
+  background: #fff;
+  height: 60px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+.page-content {
+  padding: 1.5rem;
+}
+
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.stat-card {
+  border-radius: 12px;
+  padding: 1.5rem;
+  color: white;
+  transition: transform 0.2s;
+}
+
+.stat-card:hover {
+  transform: translateY(-3px);
+}
+
+.btn-primary { background-color: var(--primary); border-color: var(--primary); }
+.btn-primary:hover { background-color: #0d4f75; border-color: #0d4f75; }
+
+.badge-role-ADMIN { background-color: #dc3545; }
+.badge-role-MEDECIN { background-color: #0d6efd; }
+.badge-role-ASSISTANT { background-color: #198754; }
+.badge-role-SPECIALISTE { background-color: #6f42c1; }
+
+.table th { background-color: #f8f9fa; font-weight: 600; color: #495057; }
+
+/* Auth page */
+.auth-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a6b9a 0%, #0d4f75 50%, #28a745 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}

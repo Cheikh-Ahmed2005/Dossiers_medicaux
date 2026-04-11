@@ -1,0 +1,47 @@
+<div class="page-content">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h4 class="fw-bold mb-0">&#129658; Consultations</h4>
+    <a routerLink="/consultations/new" class="btn btn-primary">&#43; Nouvelle consultation</a>
+  </div>
+
+  <div class="card">
+    <div class="card-body p-0">
+      @if (loading()) {
+        <div class="text-center py-5"><div class="spinner-border text-primary"></div></div>
+      } @else if (consultations().length === 0) {
+        <div class="text-center py-5 text-muted">
+          <div style="font-size:3rem">&#129658;</div>
+          <p>Aucune consultation enregistrée</p>
+        </div>
+      } @else {
+        <div class="table-responsive">
+          <table class="table table-hover mb-0">
+            <thead>
+              <tr>
+                <th>#</th><th>Patient</th><th>Médecin</th>
+                <th>Date</th><th>Diagnostic</th><th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (c of consultations(); track c.id) {
+                <tr>
+                  <td class="text-muted">{{ c.id }}</td>
+                  <td class="fw-semibold">{{ c.patient.nom }} {{ c.patient.prenom }}</td>
+                  <td>Dr. {{ c.medecin.nom }} {{ c.medecin.prenom }}</td>
+                  <td>{{ c.dateConsultation | date:'dd/MM/yyyy HH:mm' }}</td>
+                  <td class="text-truncate" style="max-width:200px">{{ c.diagnostic || '-' }}</td>
+                  <td>
+                    <div class="btn-group btn-group-sm">
+                      <a [routerLink]="['/consultations', c.id, 'edit']" class="btn btn-outline-warning">&#9999;</a>
+                      <button class="btn btn-outline-danger" (click)="delete(c.id)">&#128465;</button>
+                    </div>
+                  </td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      }
+    </div>
+  </div>
+</div>

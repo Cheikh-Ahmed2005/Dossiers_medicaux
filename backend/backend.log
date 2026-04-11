@@ -1,0 +1,7063 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< com.medical:dossier-medical >---------------------
+[INFO] Building dossier-medical 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:3.2.3:run (default-cli) > test-compile @ dossier-medical >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ dossier-medical ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.11.0:compile (default-compile) @ dossier-medical ---
+[INFO] Changes detected - recompiling the module! :source
+[INFO] Compiling 57 source files with javac [debug release 17] to target\classes
+[INFO] Annotation processing is enabled because one or more processors were found
+  on the class path. A future release of javac may disable annotation processing
+  unless at least one processor is specified by name (-processor), or a search
+  path is specified (--processor-path, --processor-module-path), or annotation
+  processing is enabled explicitly (-proc:only, -proc:full).
+  Use -Xlint:-options to suppress this message.
+  Use -proc:none to disable annotation processing.
+[WARNING] /C:/Users/HP/Videos/PI_S3/backend/src/main/java/com/medical/dossier/dto/LoginResponse.java:[14,20] @Builder will ignore the initializing expression entirely. If you want the initializing expression to serve as default, add @Builder.Default. If it is not supposed to be settable during building, make the field final.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ dossier-medical ---
+[INFO] skip non existing resourceDirectory C:\Users\HP\Videos\PI_S3\backend\src\test\resources
+[INFO] 
+[INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ dossier-medical ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< spring-boot:3.2.3:run (default-cli) < test-compile @ dossier-medical <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:3.2.3:run (default-cli) @ dossier-medical ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v3.2.3)
+
+2026-03-01T23:10:13.974Z  INFO 20676 --- [           main] c.m.dossier.DossierMedicalApplication    : Starting DossierMedicalApplication using Java 21.0.9 with PID 20676 (C:\Users\HP\Videos\PI_S3\backend\target\classes started by HP in C:\Users\HP\Videos\PI_S3\backend)
+2026-03-01T23:10:13.976Z DEBUG 20676 --- [           main] c.m.dossier.DossierMedicalApplication    : Running with Spring Boot v3.2.3, Spring v6.1.4
+2026-03-01T23:10:13.978Z  INFO 20676 --- [           main] c.m.dossier.DossierMedicalApplication    : No active profile set, falling back to 1 default profile: "default"
+2026-03-01T23:10:14.627Z  INFO 20676 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-03-01T23:10:14.700Z  INFO 20676 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 67 ms. Found 9 JPA repository interfaces.
+2026-03-01T23:10:15.212Z  INFO 20676 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2026-03-01T23:10:15.230Z  INFO 20676 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-03-01T23:10:15.230Z  INFO 20676 --- [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.19]
+2026-03-01T23:10:15.268Z  INFO 20676 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2026-03-01T23:10:15.268Z  INFO 20676 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1248 ms
+2026-03-01T23:10:15.370Z  INFO 20676 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-03-01T23:10:15.402Z  INFO 20676 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.4.4.Final
+2026-03-01T23:10:15.418Z  INFO 20676 --- [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-03-01T23:10:15.632Z  INFO 20676 --- [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-03-01T23:10:15.648Z  INFO 20676 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-03-01T23:10:15.784Z  INFO 20676 --- [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2c8a445b
+2026-03-01T23:10:15.785Z  INFO 20676 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-03-01T23:10:15.818Z  WARN 20676 --- [           main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-03-01T23:10:16.777Z  INFO 20676 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-03-01T23:10:16.968Z  INFO 20676 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-03-01T23:10:17.421Z DEBUG 20676 --- [           main] c.medical.dossier.config.JwtAuthFilter   : Filter 'jwtAuthFilter' configured for use
+2026-03-01T23:10:17.643Z  INFO 20676 --- [           main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-03-01T23:10:18.441Z  WARN 20676 --- [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-03-01T23:10:18.775Z  INFO 20676 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@685dceb8, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7f3616d2, org.springframework.security.web.context.SecurityContextHolderFilter@6e48dc84, org.springframework.security.web.header.HeaderWriterFilter@202d83b9, org.springframework.web.filter.CorsFilter@7e5c04a4, org.springframework.security.web.authentication.logout.LogoutFilter@53e7cc08, com.medical.dossier.config.JwtAuthFilter@48b01607, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@2449dff5, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4d2068ea, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6212dc7d, org.springframework.security.web.session.SessionManagementFilter@e206be5, org.springframework.security.web.access.ExceptionTranslationFilter@791b9887, org.springframework.security.web.access.intercept.AuthorizationFilter@32e9c8]
+2026-03-01T23:10:19.319Z  INFO 20676 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+2026-03-01T23:10:19.335Z  INFO 20676 --- [           main] c.m.dossier.DossierMedicalApplication    : Started DossierMedicalApplication in 5.687 seconds (process running for 6.032)
+2026-03-01T23:10:21.779Z  INFO 20676 --- [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2026-03-01T23:10:21.779Z  INFO 20676 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2026-03-01T23:10:21.779Z  INFO 20676 --- [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2026-03-01T23:10:21.795Z DEBUG 20676 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-01T23:10:21.811Z DEBUG 20676 --- [nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-01T23:10:21.811Z DEBUG 20676 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-01T23:10:22.227Z DEBUG 20676 --- [nio-8080-exec-1] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2026-03-01T23:12:24.319Z DEBUG 20676 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-01T23:12:24.319Z DEBUG 20676 --- [nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-01T23:12:24.319Z DEBUG 20676 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-01T23:12:24.399Z DEBUG 20676 --- [nio-8080-exec-4] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2026-03-01T23:12:24.476Z DEBUG 20676 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/utilisateurs
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-01T23:12:24.544Z DEBUG 20676 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/utilisateurs
+2026-03-01T23:12:24.544Z DEBUG 20676 --- [nio-8080-exec-5] horizationManagerBeforeMethodInterceptor : Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.medical.dossier.controller.UtilisateurController.getAll(); target is of class [com.medical.dossier.controller.UtilisateurController]
+2026-03-01T23:12:24.571Z DEBUG 20676 --- [nio-8080-exec-5] horizationManagerBeforeMethodInterceptor : Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.medical.dossier.controller.UtilisateurController.getAll(); target is of class [com.medical.dossier.controller.UtilisateurController]
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0
+2026-03-01T23:16:21.321Z DEBUG 20676 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/login
+2026-03-01T23:16:21.336Z DEBUG 20676 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-01T23:16:21.340Z DEBUG 20676 --- [nio-8080-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-01T23:16:21.341Z DEBUG 20676 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.email=?
+2026-03-01T23:16:21.439Z DEBUG 20676 --- [nio-8080-exec-8] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2026-03-01T23:16:21.540Z DEBUG 20676 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-01T23:16:21.543Z DEBUG 20676 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-01T23:16:21.550Z DEBUG 20676 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-01T23:16:30.946Z DEBUG 20676 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/patients
+2026-03-01T23:16:30.949Z DEBUG 20676 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/patients
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-01T23:16:30.958Z DEBUG 20676 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/patients
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.adresse,
+        p1_0.allergies,
+        p1_0.created_at,
+        p1_0.date_naissance,
+        p1_0.groupe_sanguin,
+        p1_0.nom,
+        p1_0.prenom,
+        p1_0.sexe,
+        p1_0.telephone 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+2026-03-01T23:16:35.859Z DEBUG 20676 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/rendez-vous
+2026-03-01T23:16:35.863Z DEBUG 20676 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/rendez-vous
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-01T23:16:35.873Z DEBUG 20676 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/rendez-vous
+Hibernate: 
+    select
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.patient_id,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0
+2026-03-01T23:16:37.094Z DEBUG 20676 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/medecins
+2026-03-01T23:16:37.099Z DEBUG 20676 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/services
+2026-03-01T23:16:37.099Z DEBUG 20676 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/medecins
+2026-03-01T23:16:37.103Z DEBUG 20676 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/services
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-01T23:16:37.108Z DEBUG 20676 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/medecins
+2026-03-01T23:16:37.109Z DEBUG 20676 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/services
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.nom,
+        m1_0.prenom,
+        m1_0.service_id,
+        m1_0.specialite,
+        m1_0.utilisateur_id 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        sh1_0.id,
+        sh1_0.description,
+        sh1_0.nom_service 
+    from
+        services sh1_0
+Hibernate: 
+    select
+        sh1_0.id,
+        sh1_0.description,
+        sh1_0.nom_service 
+    from
+        services sh1_0 
+    where
+        sh1_0.id=?
+2026-03-01T23:16:37.879Z DEBUG 20676 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/services
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-01T23:16:37.884Z DEBUG 20676 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/services
+Hibernate: 
+    select
+        sh1_0.id,
+        sh1_0.description,
+        sh1_0.nom_service 
+    from
+        services sh1_0
+2026-03-01T23:16:38.729Z DEBUG 20676 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/utilisateurs
+2026-03-01T23:16:38.732Z DEBUG 20676 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/utilisateurs
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-01T23:16:38.734Z DEBUG 20676 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/utilisateurs
+2026-03-01T23:16:38.734Z DEBUG 20676 --- [nio-8080-exec-1] horizationManagerBeforeMethodInterceptor : Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.medical.dossier.controller.UtilisateurController.getAll(); target is of class [com.medical.dossier.controller.UtilisateurController]
+2026-03-01T23:16:38.734Z DEBUG 20676 --- [nio-8080-exec-1] horizationManagerBeforeMethodInterceptor : Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.medical.dossier.controller.UtilisateurController.getAll(); target is of class [com.medical.dossier.controller.UtilisateurController]
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0
+2026-03-01T23:21:37.020Z DEBUG 20676 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/login
+2026-03-01T23:21:37.023Z DEBUG 20676 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-01T23:21:37.024Z DEBUG 20676 --- [nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-01T23:21:37.024Z DEBUG 20676 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.email=?
+2026-03-01T23:21:37.170Z DEBUG 20676 --- [nio-8080-exec-3] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2026-03-01T23:21:37.227Z DEBUG 20676 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-01T23:21:37.230Z DEBUG 20676 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-01T23:21:37.237Z DEBUG 20676 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-01T23:21:41.102Z DEBUG 20676 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/patients
+2026-03-01T23:21:41.105Z DEBUG 20676 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/patients
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-01T23:21:41.111Z DEBUG 20676 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/patients
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.adresse,
+        p1_0.allergies,
+        p1_0.created_at,
+        p1_0.date_naissance,
+        p1_0.groupe_sanguin,
+        p1_0.nom,
+        p1_0.prenom,
+        p1_0.sexe,
+        p1_0.telephone 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+2026-03-01T23:21:44.727Z DEBUG 20676 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/patients
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-01T23:21:44.737Z DEBUG 20676 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/patients
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.adresse,
+        p1_0.allergies,
+        p1_0.created_at,
+        p1_0.date_naissance,
+        p1_0.groupe_sanguin,
+        p1_0.nom,
+        p1_0.prenom,
+        p1_0.sexe,
+        p1_0.telephone 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+2026-03-01T23:21:46.226Z DEBUG 20676 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/patients/2
+2026-03-01T23:21:46.231Z DEBUG 20676 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/patients/2
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-01T23:21:46.233Z DEBUG 20676 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/patients/2
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.adresse,
+        p1_0.allergies,
+        p1_0.created_at,
+        p1_0.date_naissance,
+        p1_0.groupe_sanguin,
+        p1_0.nom,
+        p1_0.prenom,
+        p1_0.sexe,
+        p1_0.telephone 
+    from
+        patients p1_0 
+    where
+        p1_0.id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+2026-03-01T23:43:20.872Z DEBUG 20676 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/patients/2
+2026-03-01T23:43:20.890Z DEBUG 20676 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/patients/2
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-01T23:43:20.960Z DEBUG 20676 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/patients/2
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.adresse,
+        p1_0.allergies,
+        p1_0.created_at,
+        p1_0.date_naissance,
+        p1_0.groupe_sanguin,
+        p1_0.nom,
+        p1_0.prenom,
+        p1_0.sexe,
+        p1_0.telephone 
+    from
+        patients p1_0 
+    where
+        p1_0.id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+2026-03-01T23:43:41.728Z  WARN 20676 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=8m55s326ms297µs100ns).
+2026-03-01T23:44:44.191Z DEBUG 20676 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/login
+2026-03-01T23:45:00.862Z DEBUG 20676 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/login
+2026-03-01T23:45:00.865Z DEBUG 20676 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-01T23:45:00.922Z DEBUG 20676 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.email=?
+2026-03-01T23:45:01.038Z DEBUG 20676 --- [nio-8080-exec-7] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2026-03-01T23:45:01.075Z DEBUG 20676 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-01T23:45:01.078Z DEBUG 20676 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-01T23:45:01.087Z DEBUG 20676 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-01T23:50:24.205Z DEBUG 20676 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-01T23:50:24.210Z DEBUG 20676 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-01T23:50:24.223Z DEBUG 20676 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-01T23:57:34.794Z  WARN 20676 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=52s893ms655µs700ns).
+2026-03-02T00:01:55.071Z DEBUG 20676 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T00:01:55.093Z DEBUG 20676 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T00:01:55.162Z DEBUG 20676 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T00:02:17.111Z DEBUG 20676 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T00:02:17.113Z DEBUG 20676 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T00:02:17.126Z DEBUG 20676 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T00:02:39.938Z DEBUG 20676 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/login
+2026-03-02T00:02:39.945Z DEBUG 20676 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T00:02:39.960Z DEBUG 20676 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.email=?
+2026-03-02T00:02:40.100Z DEBUG 20676 --- [nio-8080-exec-1] o.s.s.a.dao.DaoAuthenticationProvider    : Failed to authenticate since password does not match stored value
+2026-03-02T00:02:45.719Z DEBUG 20676 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/login
+2026-03-02T00:02:45.719Z DEBUG 20676 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T00:02:45.735Z DEBUG 20676 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.email=?
+2026-03-02T00:02:45.834Z DEBUG 20676 --- [nio-8080-exec-4] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2026-03-02T00:02:45.872Z DEBUG 20676 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T00:02:45.873Z DEBUG 20676 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T00:02:45.888Z DEBUG 20676 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T01:42:59.404Z DEBUG 20676 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T01:42:59.423Z DEBUG 20676 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:42:59.502Z DEBUG 20676 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T01:43:06.915Z DEBUG 20676 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T01:43:06.921Z DEBUG 20676 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:43:06.937Z DEBUG 20676 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T01:43:11.961Z DEBUG 20676 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T01:43:11.968Z DEBUG 20676 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:43:12.002Z DEBUG 20676 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T01:43:17.568Z  WARN 20676 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1h38m42s643ms781µs300ns).
+2026-03-02T01:43:24.302Z DEBUG 20676 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T01:43:24.311Z DEBUG 20676 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:43:24.330Z DEBUG 20676 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T01:43:24.955Z DEBUG 20676 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T01:43:24.957Z DEBUG 20676 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:43:24.971Z DEBUG 20676 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T01:45:25.225Z DEBUG 20676 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T01:45:25.234Z DEBUG 20676 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:45:25.250Z DEBUG 20676 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T01:45:36.242Z DEBUG 20676 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T01:45:36.247Z DEBUG 20676 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:45:36.257Z DEBUG 20676 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T01:45:38.756Z DEBUG 20676 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:45:38.767Z DEBUG 20676 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T01:46:47.806Z DEBUG 20676 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/rendez-vous
+2026-03-02T01:46:47.815Z DEBUG 20676 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/rendez-vous
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:46:47.829Z DEBUG 20676 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/rendez-vous
+Hibernate: 
+    select
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.patient_id,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0
+2026-03-02T01:46:51.366Z DEBUG 20676 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/patients
+2026-03-02T01:46:51.366Z DEBUG 20676 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/medecins
+2026-03-02T01:46:51.374Z DEBUG 20676 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/patients
+2026-03-02T01:46:51.374Z DEBUG 20676 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/medecins
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:46:51.383Z DEBUG 20676 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/patients
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.adresse,
+        p1_0.allergies,
+        p1_0.created_at,
+        p1_0.date_naissance,
+        p1_0.groupe_sanguin,
+        p1_0.nom,
+        p1_0.prenom,
+        p1_0.sexe,
+        p1_0.telephone 
+    from
+        patients p1_0
+2026-03-02T01:46:51.392Z DEBUG 20676 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/medecins
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.nom,
+        m1_0.prenom,
+        m1_0.service_id,
+        m1_0.specialite,
+        m1_0.utilisateur_id 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        sh1_0.id,
+        sh1_0.description,
+        sh1_0.nom_service 
+    from
+        services sh1_0 
+    where
+        sh1_0.id=?
+2026-03-02T01:47:14.431Z DEBUG 20676 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T01:47:14.431Z DEBUG 20676 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:47:14.444Z DEBUG 20676 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T01:47:43.318Z DEBUG 20676 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/patients
+2026-03-02T01:47:43.321Z DEBUG 20676 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/patients
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:47:43.330Z DEBUG 20676 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/patients
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.adresse,
+        p1_0.allergies,
+        p1_0.created_at,
+        p1_0.date_naissance,
+        p1_0.groupe_sanguin,
+        p1_0.nom,
+        p1_0.prenom,
+        p1_0.sexe,
+        p1_0.telephone 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+2026-03-02T01:47:47.750Z DEBUG 20676 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/patients/2
+2026-03-02T01:47:47.754Z DEBUG 20676 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/patients/2
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:47:47.766Z DEBUG 20676 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/patients/2
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.adresse,
+        p1_0.allergies,
+        p1_0.created_at,
+        p1_0.date_naissance,
+        p1_0.groupe_sanguin,
+        p1_0.nom,
+        p1_0.prenom,
+        p1_0.sexe,
+        p1_0.telephone 
+    from
+        patients p1_0 
+    where
+        p1_0.id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+2026-03-02T01:47:51.637Z DEBUG 20676 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/patients
+2026-03-02T01:47:51.644Z DEBUG 20676 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/patients
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:47:51.652Z DEBUG 20676 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/patients
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.adresse,
+        p1_0.allergies,
+        p1_0.created_at,
+        p1_0.date_naissance,
+        p1_0.groupe_sanguin,
+        p1_0.nom,
+        p1_0.prenom,
+        p1_0.sexe,
+        p1_0.telephone 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+2026-03-02T01:47:54.400Z DEBUG 20676 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T01:47:54.400Z DEBUG 20676 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:47:54.412Z DEBUG 20676 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T01:47:55.593Z DEBUG 20676 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/patients
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:47:55.640Z DEBUG 20676 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/patients
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.adresse,
+        p1_0.allergies,
+        p1_0.created_at,
+        p1_0.date_naissance,
+        p1_0.groupe_sanguin,
+        p1_0.nom,
+        p1_0.prenom,
+        p1_0.sexe,
+        p1_0.telephone 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+2026-03-02T01:47:56.532Z DEBUG 20676 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/rendez-vous
+2026-03-02T01:47:56.532Z DEBUG 20676 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/rendez-vous
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:47:56.600Z DEBUG 20676 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/rendez-vous
+Hibernate: 
+    select
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.patient_id,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0
+2026-03-02T01:47:57.395Z DEBUG 20676 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/patients
+2026-03-02T01:47:57.399Z DEBUG 20676 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/patients
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:47:57.448Z DEBUG 20676 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/patients
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.adresse,
+        p1_0.allergies,
+        p1_0.created_at,
+        p1_0.date_naissance,
+        p1_0.groupe_sanguin,
+        p1_0.nom,
+        p1_0.prenom,
+        p1_0.sexe,
+        p1_0.telephone 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+2026-03-02T01:47:58.279Z DEBUG 20676 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:47:58.358Z DEBUG 20676 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T01:49:51.246Z DEBUG 20676 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/patients
+2026-03-02T01:49:51.253Z DEBUG 20676 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/patients
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:49:51.262Z DEBUG 20676 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/patients
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.adresse,
+        p1_0.allergies,
+        p1_0.created_at,
+        p1_0.date_naissance,
+        p1_0.groupe_sanguin,
+        p1_0.nom,
+        p1_0.prenom,
+        p1_0.sexe,
+        p1_0.telephone 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+2026-03-02T01:49:52.425Z DEBUG 20676 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T01:49:52.432Z DEBUG 20676 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:49:52.495Z DEBUG 20676 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T01:49:57.350Z DEBUG 20676 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/patients
+2026-03-02T01:49:57.407Z DEBUG 20676 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/patients
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:49:57.407Z DEBUG 20676 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/patients
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.adresse,
+        p1_0.allergies,
+        p1_0.created_at,
+        p1_0.date_naissance,
+        p1_0.groupe_sanguin,
+        p1_0.nom,
+        p1_0.prenom,
+        p1_0.sexe,
+        p1_0.telephone 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+2026-03-02T01:49:59.566Z DEBUG 20676 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/rendez-vous
+2026-03-02T01:49:59.657Z DEBUG 20676 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/rendez-vous
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:49:59.667Z DEBUG 20676 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/rendez-vous
+Hibernate: 
+    select
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.patient_id,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0
+2026-03-02T01:50:00.873Z DEBUG 20676 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/medecins
+2026-03-02T01:50:00.873Z DEBUG 20676 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/services
+2026-03-02T01:50:00.876Z DEBUG 20676 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/medecins
+2026-03-02T01:50:00.877Z DEBUG 20676 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/services
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:50:00.882Z DEBUG 20676 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/medecins
+2026-03-02T01:50:00.886Z DEBUG 20676 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/services
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.nom,
+        m1_0.prenom,
+        m1_0.service_id,
+        m1_0.specialite,
+        m1_0.utilisateur_id 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        sh1_0.id,
+        sh1_0.description,
+        sh1_0.nom_service 
+    from
+        services sh1_0
+Hibernate: 
+    select
+        sh1_0.id,
+        sh1_0.description,
+        sh1_0.nom_service 
+    from
+        services sh1_0 
+    where
+        sh1_0.id=?
+2026-03-02T01:50:02.801Z DEBUG 20676 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/services
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:50:02.812Z DEBUG 20676 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/services
+Hibernate: 
+    select
+        sh1_0.id,
+        sh1_0.description,
+        sh1_0.nom_service 
+    from
+        services sh1_0
+2026-03-02T01:50:04.242Z DEBUG 20676 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/utilisateurs
+2026-03-02T01:50:04.251Z DEBUG 20676 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/utilisateurs
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:50:04.251Z DEBUG 20676 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/utilisateurs
+2026-03-02T01:50:04.251Z DEBUG 20676 --- [nio-8080-exec-5] horizationManagerBeforeMethodInterceptor : Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.medical.dossier.controller.UtilisateurController.getAll(); target is of class [com.medical.dossier.controller.UtilisateurController]
+2026-03-02T01:50:04.267Z DEBUG 20676 --- [nio-8080-exec-5] horizationManagerBeforeMethodInterceptor : Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.medical.dossier.controller.UtilisateurController.getAll(); target is of class [com.medical.dossier.controller.UtilisateurController]
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0
+2026-03-02T01:50:05.817Z DEBUG 20676 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/services
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:50:05.823Z DEBUG 20676 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/services
+Hibernate: 
+    select
+        sh1_0.id,
+        sh1_0.description,
+        sh1_0.nom_service 
+    from
+        services sh1_0
+2026-03-02T01:50:07.108Z DEBUG 20676 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/medecins
+2026-03-02T01:50:07.166Z DEBUG 20676 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/services
+2026-03-02T01:50:07.166Z DEBUG 20676 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/medecins
+2026-03-02T01:50:07.174Z DEBUG 20676 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/services
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:50:07.174Z DEBUG 20676 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/medecins
+2026-03-02T01:50:07.181Z DEBUG 20676 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/services
+Hibernate: 
+    select
+        m1_0.id,
+        m1_0.nom,
+        m1_0.prenom,
+        m1_0.service_id,
+        m1_0.specialite,
+        m1_0.utilisateur_id 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        sh1_0.id,
+        sh1_0.description,
+        sh1_0.nom_service 
+    from
+        services sh1_0
+Hibernate: 
+    select
+        sh1_0.id,
+        sh1_0.description,
+        sh1_0.nom_service 
+    from
+        services sh1_0 
+    where
+        sh1_0.id=?
+2026-03-02T01:50:08.542Z DEBUG 20676 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/rendez-vous
+2026-03-02T01:50:08.592Z DEBUG 20676 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/rendez-vous
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:50:08.604Z DEBUG 20676 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/rendez-vous
+Hibernate: 
+    select
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.patient_id,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0
+2026-03-02T01:50:09.677Z DEBUG 20676 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/patients
+2026-03-02T01:50:09.681Z DEBUG 20676 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/patients
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:50:09.747Z DEBUG 20676 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/patients
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.adresse,
+        p1_0.allergies,
+        p1_0.created_at,
+        p1_0.date_naissance,
+        p1_0.groupe_sanguin,
+        p1_0.nom,
+        p1_0.prenom,
+        p1_0.sexe,
+        p1_0.telephone 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+2026-03-02T01:50:10.643Z DEBUG 20676 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T01:50:10.645Z DEBUG 20676 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:50:10.645Z DEBUG 20676 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T01:52:30.507Z DEBUG 20676 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/utilisateurs
+2026-03-02T01:52:30.516Z DEBUG 20676 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/utilisateurs
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:52:30.527Z DEBUG 20676 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/utilisateurs
+2026-03-02T01:52:30.527Z DEBUG 20676 --- [io-8080-exec-10] horizationManagerBeforeMethodInterceptor : Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.medical.dossier.controller.UtilisateurController.getAll(); target is of class [com.medical.dossier.controller.UtilisateurController]
+2026-03-02T01:52:30.527Z DEBUG 20676 --- [io-8080-exec-10] horizationManagerBeforeMethodInterceptor : Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.medical.dossier.controller.UtilisateurController.getAll(); target is of class [com.medical.dossier.controller.UtilisateurController]
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0
+2026-03-02T01:52:34.890Z DEBUG 20676 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T01:52:34.945Z DEBUG 20676 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:52:34.961Z DEBUG 20676 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T01:52:53.599Z DEBUG 20676 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T01:52:53.602Z DEBUG 20676 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:52:53.610Z DEBUG 20676 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T01:53:56.566Z DEBUG 20676 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/login
+2026-03-02T01:53:56.570Z DEBUG 20676 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:53:56.581Z DEBUG 20676 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.email=?
+2026-03-02T01:53:56.792Z DEBUG 20676 --- [nio-8080-exec-8] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2026-03-02T01:53:56.816Z DEBUG 20676 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T01:53:56.819Z DEBUG 20676 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:53:56.825Z DEBUG 20676 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T01:57:10.682Z DEBUG 20676 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T01:57:10.692Z DEBUG 20676 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+2026-03-02T01:57:10.692Z DEBUG 20676 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:57:10.703Z DEBUG 20676 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T01:57:10.718Z DEBUG 20676 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:57:10.735Z DEBUG 20676 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T01:57:26.650Z DEBUG 20676 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T01:57:26.683Z DEBUG 20676 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:57:26.709Z DEBUG 20676 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T01:57:26.959Z DEBUG 20676 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:57:26.969Z DEBUG 20676 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T01:58:49.998Z DEBUG 20676 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T01:58:50.017Z DEBUG 20676 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:58:50.021Z DEBUG 20676 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T01:59:11.554Z DEBUG 20676 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/login
+2026-03-02T01:59:11.557Z DEBUG 20676 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-02T01:59:11.558Z DEBUG 20676 --- [nio-8080-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-02T01:59:11.558Z DEBUG 20676 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.email=?
+2026-03-02T01:59:11.800Z DEBUG 20676 --- [nio-8080-exec-1] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2026-03-02T01:59:11.833Z DEBUG 20676 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T01:59:11.838Z DEBUG 20676 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:59:11.846Z DEBUG 20676 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T01:59:17.306Z DEBUG 20676 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T01:59:17.309Z DEBUG 20676 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:59:17.315Z DEBUG 20676 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T01:59:29.278Z DEBUG 20676 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T01:59:29.282Z DEBUG 20676 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:59:29.290Z DEBUG 20676 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T01:59:39.930Z DEBUG 20676 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T01:59:39.940Z DEBUG 20676 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T01:59:39.948Z DEBUG 20676 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T02:00:51.857Z DEBUG 20676 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T02:00:51.864Z DEBUG 20676 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T02:00:51.879Z DEBUG 20676 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T02:00:55.112Z DEBUG 20676 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T02:00:55.120Z DEBUG 20676 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T02:01:08.878Z DEBUG 20676 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T02:01:08.882Z DEBUG 20676 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T02:01:08.886Z DEBUG 20676 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T02:01:27.361Z DEBUG 20676 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-02T02:01:27.361Z DEBUG 20676 --- [nio-8080-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-02T02:01:27.361Z DEBUG 20676 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T02:01:27.567Z DEBUG 20676 --- [nio-8080-exec-9] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2026-03-02T02:01:40.746Z DEBUG 20676 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/auth/login
+2026-03-02T02:01:40.746Z DEBUG 20676 --- [nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-02T02:01:40.746Z DEBUG 20676 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/auth/login
+2026-03-02T02:01:40.749Z  WARN 20676 --- [nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-03-02T02:01:40.763Z DEBUG 20676 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /error
+2026-03-02T02:01:40.763Z DEBUG 20676 --- [nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-02T02:01:40.779Z DEBUG 20676 --- [nio-8080-exec-4] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2026-03-02T02:01:58.543Z DEBUG 20676 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-02T02:01:58.543Z DEBUG 20676 --- [nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-02T02:01:58.543Z DEBUG 20676 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T02:01:58.738Z DEBUG 20676 --- [nio-8080-exec-6] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2026-03-02T02:03:09.922Z DEBUG 20676 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T02:03:09.930Z DEBUG 20676 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T02:03:09.936Z DEBUG 20676 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T02:03:14.374Z DEBUG 20676 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T02:03:14.374Z DEBUG 20676 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T02:04:40.719Z DEBUG 20676 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T02:04:40.719Z DEBUG 20676 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T02:04:40.732Z DEBUG 20676 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T02:04:43.547Z DEBUG 20676 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T02:04:43.571Z DEBUG 20676 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T02:04:50.953Z DEBUG 20676 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T02:04:50.956Z DEBUG 20676 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T02:04:50.962Z DEBUG 20676 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T02:04:56.875Z DEBUG 20676 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T02:04:56.882Z DEBUG 20676 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T02:04:56.887Z DEBUG 20676 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T02:19:35.620Z  WARN 20676 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=9m17s560ms682µs300ns).
+2026-03-02T02:26:23.574Z DEBUG 20676 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T02:26:23.578Z DEBUG 20676 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T02:26:23.591Z DEBUG 20676 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T02:26:44.456Z DEBUG 20676 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T02:26:44.465Z DEBUG 20676 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T02:26:44.472Z DEBUG 20676 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T02:26:44.602Z  WARN 20676 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m8s982ms252µs900ns).
+2026-03-02T02:26:46.740Z DEBUG 20676 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T02:26:46.754Z DEBUG 20676 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T02:26:48.182Z DEBUG 20676 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T02:26:48.192Z DEBUG 20676 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T02:26:50.544Z DEBUG 20676 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T02:26:50.560Z DEBUG 20676 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T02:26:50.570Z DEBUG 20676 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T02:26:54.713Z DEBUG 20676 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T02:26:54.717Z DEBUG 20676 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T02:37:57.772Z DEBUG 20676 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T02:37:57.785Z DEBUG 20676 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T02:37:57.889Z DEBUG 20676 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T02:37:58.093Z DEBUG 20676 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T02:37:58.103Z DEBUG 20676 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T02:37:58.128Z DEBUG 20676 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T02:37:58.128Z DEBUG 20676 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T02:37:58.144Z DEBUG 20676 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T02:37:58.160Z DEBUG 20676 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T02:45:53.161Z  WARN 20676 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m8s280ms486µs400ns).
+2026-03-02T02:45:53.553Z DEBUG 20676 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T02:45:53.559Z DEBUG 20676 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T02:45:53.660Z DEBUG 20676 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T02:45:53.806Z DEBUG 20676 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T02:45:53.814Z DEBUG 20676 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T02:45:53.835Z DEBUG 20676 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T02:45:53.843Z DEBUG 20676 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T02:45:53.861Z DEBUG 20676 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T02:45:53.868Z DEBUG 20676 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T02:47:31.077Z DEBUG 20676 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T02:47:31.083Z DEBUG 20676 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T02:47:31.092Z DEBUG 20676 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T02:47:40.412Z DEBUG 20676 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T02:47:40.412Z DEBUG 20676 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T02:47:40.425Z DEBUG 20676 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T02:54:27.615Z DEBUG 20676 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T02:54:27.619Z DEBUG 20676 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T02:54:27.629Z DEBUG 20676 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T02:54:53.468Z DEBUG 20676 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/login
+2026-03-02T02:54:53.473Z DEBUG 20676 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-02T02:54:53.473Z DEBUG 20676 --- [nio-8080-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-02T02:54:53.482Z DEBUG 20676 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.email=?
+2026-03-02T02:54:53.769Z DEBUG 20676 --- [nio-8080-exec-4] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2026-03-02T02:54:53.801Z DEBUG 20676 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T02:54:53.804Z DEBUG 20676 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T02:54:53.810Z DEBUG 20676 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T02:57:13.788Z DEBUG 20676 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T02:57:13.804Z DEBUG 20676 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T02:57:13.886Z DEBUG 20676 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T02:57:18.176Z DEBUG 20676 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T02:57:18.191Z DEBUG 20676 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T03:10:16.397Z DEBUG 20676 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T03:10:16.427Z DEBUG 20676 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T03:10:16.527Z DEBUG 20676 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T03:10:24.572Z  WARN 20676 --- [l-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m1s71ms902µs).
+2026-03-02T03:12:32.471Z DEBUG 20676 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T03:12:32.482Z DEBUG 20676 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T03:12:32.508Z DEBUG 20676 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T03:12:58.799Z DEBUG 20676 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/login
+2026-03-02T03:12:58.801Z DEBUG 20676 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-02T03:12:58.807Z DEBUG 20676 --- [nio-8080-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-02T03:12:58.807Z DEBUG 20676 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.email=?
+2026-03-02T03:12:59.067Z DEBUG 20676 --- [nio-8080-exec-6] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2026-03-02T03:12:59.091Z DEBUG 20676 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T03:12:59.095Z DEBUG 20676 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T03:12:59.105Z DEBUG 20676 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T03:17:51.792Z DEBUG 20676 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T03:17:51.812Z DEBUG 20676 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T03:17:51.871Z DEBUG 20676 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T03:18:05.355Z DEBUG 20676 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/patients
+2026-03-02T03:18:05.360Z DEBUG 20676 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/patients
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T03:18:05.372Z DEBUG 20676 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/patients
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.adresse,
+        p1_0.allergies,
+        p1_0.created_at,
+        p1_0.date_naissance,
+        p1_0.groupe_sanguin,
+        p1_0.nom,
+        p1_0.prenom,
+        p1_0.sexe,
+        p1_0.telephone 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+2026-03-02T03:18:06.505Z DEBUG 20676 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/consultations
+2026-03-02T03:18:06.515Z DEBUG 20676 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/consultations
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T03:18:06.530Z DEBUG 20676 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/consultations
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.patient_id,
+        c1_0.traitement 
+    from
+        consultations c1_0
+2026-03-02T03:18:07.517Z DEBUG 20676 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/rendez-vous
+2026-03-02T03:18:07.523Z DEBUG 20676 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/rendez-vous
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T03:18:07.529Z DEBUG 20676 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/rendez-vous
+Hibernate: 
+    select
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.patient_id,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0
+2026-03-02T03:19:31.963Z DEBUG 20676 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/login
+2026-03-02T03:19:50.906Z DEBUG 20676 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/login
+2026-03-02T03:20:00.001Z DEBUG 20676 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/login
+2026-03-02T03:22:07.565Z DEBUG 20676 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/login
+2026-03-02T03:22:09.679Z DEBUG 20676 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/login
+2026-03-02T03:22:10.505Z DEBUG 20676 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/login
+2026-03-02T03:22:12.067Z DEBUG 20676 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/login
+2026-03-02T03:22:12.290Z DEBUG 20676 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/login
+2026-03-02T03:22:57.479Z DEBUG 20676 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T03:22:57.490Z DEBUG 20676 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T03:22:57.617Z DEBUG 20676 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T03:23:10.389Z DEBUG 20676 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/patients
+2026-03-02T03:23:10.389Z DEBUG 20676 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /api/patients
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T03:23:10.395Z DEBUG 20676 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /api/patients
+Hibernate: 
+    select
+        p1_0.id,
+        p1_0.adresse,
+        p1_0.allergies,
+        p1_0.created_at,
+        p1_0.date_naissance,
+        p1_0.groupe_sanguin,
+        p1_0.nom,
+        p1_0.prenom,
+        p1_0.sexe,
+        p1_0.telephone 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+Hibernate: 
+    select
+        c1_0.patient_id,
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.traitement 
+    from
+        consultations c1_0 
+    where
+        c1_0.patient_id=?
+Hibernate: 
+    select
+        rv1_0.patient_id,
+        rv1_0.id,
+        rv1_0.date_rdv,
+        rv1_0.medecin_id,
+        rv1_0.motif,
+        rv1_0.statut 
+    from
+        rendez_vous rv1_0 
+    where
+        rv1_0.patient_id=?
+2026-03-02T03:23:11.379Z DEBUG 20676 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/consultations
+2026-03-02T03:23:11.381Z DEBUG 20676 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/consultations
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T03:23:11.383Z DEBUG 20676 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/consultations
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.patient_id,
+        c1_0.traitement 
+    from
+        consultations c1_0
+2026-03-02T03:23:12.291Z DEBUG 20676 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/consultations
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T03:23:12.297Z DEBUG 20676 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/consultations
+2026-03-02T03:23:12.303Z DEBUG 20676 --- [nio-8080-exec-6] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/prescriptions
+Hibernate: 
+    select
+        c1_0.id,
+        c1_0.date_consultation,
+        c1_0.diagnostic,
+        c1_0.medecin_id,
+        c1_0.notes,
+        c1_0.patient_id,
+        c1_0.traitement 
+    from
+        consultations c1_0
+2026-03-02T03:23:12.380Z DEBUG 20676 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/prescriptions
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T03:23:12.380Z DEBUG 20676 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/prescriptions
+2026-03-02T03:23:12.396Z  WARN 20676 --- [io-8080-exec-10] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' is not supported]
+2026-03-02T03:23:12.396Z DEBUG 20676 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /error
+2026-03-02T03:23:12.396Z DEBUG 20676 --- [io-8080-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-02T03:23:12.406Z DEBUG 20676 --- [io-8080-exec-10] o.s.s.w.a.Http403ForbiddenEntryPoint     : Pre-authenticated entry point called. Rejecting access
+2026-03-02T03:23:13.103Z DEBUG 20676 --- [nio-8080-exec-2] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/services
+2026-03-02T03:23:13.108Z DEBUG 20676 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /api/services
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T03:23:13.113Z DEBUG 20676 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /api/services
+Hibernate: 
+    select
+        sh1_0.id,
+        sh1_0.description,
+        sh1_0.nom_service 
+    from
+        services sh1_0
+2026-03-02T03:23:14.158Z DEBUG 20676 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/utilisateurs
+2026-03-02T03:23:14.161Z DEBUG 20676 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /api/utilisateurs
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T03:23:14.165Z DEBUG 20676 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /api/utilisateurs
+2026-03-02T03:23:14.177Z DEBUG 20676 --- [nio-8080-exec-4] horizationManagerBeforeMethodInterceptor : Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.medical.dossier.controller.UtilisateurController.getAll(); target is of class [com.medical.dossier.controller.UtilisateurController]
+2026-03-02T03:23:14.184Z DEBUG 20676 --- [nio-8080-exec-4] horizationManagerBeforeMethodInterceptor : Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.medical.dossier.controller.UtilisateurController.getAll(); target is of class [com.medical.dossier.controller.UtilisateurController]
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0
+2026-03-02T03:23:19.983Z DEBUG 20676 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T03:23:19.987Z DEBUG 20676 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T03:23:19.990Z DEBUG 20676 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T03:24:37.053Z DEBUG 20676 --- [nio-8080-exec-7] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T03:24:37.055Z DEBUG 20676 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T03:24:37.061Z DEBUG 20676 --- [io-8080-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0
+2026-03-02T03:24:52.352Z DEBUG 20676 --- [nio-8080-exec-9] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/utilisateurs
+2026-03-02T03:24:52.356Z DEBUG 20676 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/utilisateurs
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T03:24:52.364Z DEBUG 20676 --- [nio-8080-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/utilisateurs
+2026-03-02T03:24:52.364Z DEBUG 20676 --- [nio-8080-exec-1] horizationManagerBeforeMethodInterceptor : Authorizing method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.medical.dossier.controller.UtilisateurController.getAll(); target is of class [com.medical.dossier.controller.UtilisateurController]
+2026-03-02T03:24:52.364Z DEBUG 20676 --- [nio-8080-exec-1] horizationManagerBeforeMethodInterceptor : Authorized method invocation ReflectiveMethodInvocation: public org.springframework.http.ResponseEntity com.medical.dossier.controller.UtilisateurController.getAll(); target is of class [com.medical.dossier.controller.UtilisateurController]
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0
+2026-03-02T03:25:18.808Z DEBUG 20676 --- [nio-8080-exec-4] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/auth/login
+2026-03-02T03:25:18.812Z DEBUG 20676 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Securing POST /api/auth/login
+2026-03-02T03:25:18.812Z DEBUG 20676 --- [nio-8080-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
+2026-03-02T03:25:18.812Z DEBUG 20676 --- [nio-8080-exec-3] o.s.security.web.FilterChainProxy        : Secured POST /api/auth/login
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.email=?
+2026-03-02T03:25:19.023Z DEBUG 20676 --- [nio-8080-exec-3] o.s.s.a.dao.DaoAuthenticationProvider    : Authenticated user
+2026-03-02T03:25:19.055Z DEBUG 20676 --- [nio-8080-exec-5] o.s.security.web.FilterChainProxy        : Securing OPTIONS /api/dashboard/stats
+2026-03-02T03:25:19.058Z DEBUG 20676 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /api/dashboard/stats
+Hibernate: 
+    select
+        u1_0.id,
+        u1_0.actif,
+        u1_0.created_at,
+        u1_0.email,
+        u1_0.password,
+        u1_0.role,
+        u1_0.updated_at,
+        u1_0.username 
+    from
+        utilisateurs u1_0 
+    where
+        u1_0.username=?
+2026-03-02T03:25:19.064Z DEBUG 20676 --- [nio-8080-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /api/dashboard/stats
+Hibernate: 
+    select
+        count(*) 
+    from
+        patients p1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        medecins m1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        consultations c1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        rendez_vous rv1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        utilisateurs u1_0
+Hibernate: 
+    select
+        count(*) 
+    from
+        services sh1_0

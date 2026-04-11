@@ -1,0 +1,141 @@
+<nav class="sidebar d-flex flex-column py-3">
+  <!-- Logo -->
+  <div class="px-3 mb-4">
+    <div class="d-flex align-items-center">
+      <span class="fs-2 me-2">&#128138;</span>
+      <div>
+        <div class="text-white fw-bold">MedDossier</div>
+        <div class="text-white-50 small">v1.0</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- User info -->
+  @if (user()) {
+    <div class="px-3 mb-3 py-2 mx-2 rounded" style="background:rgba(255,255,255,0.1)">
+      <div class="text-white fw-semibold small">{{ user()!.username }}</div>
+      <span class="badge badge-role-{{ user()!.role }} small">{{ user()!.role }}</span>
+    </div>
+  }
+
+  <!-- Navigation -->
+  <ul class="nav flex-column flex-grow-1">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/dashboard" routerLinkActive="active">
+        &#127968; Tableau de bord
+      </a>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/patients" routerLinkActive="active">
+        &#128101; Patients
+      </a>
+    </li>
+
+    @if (isMedecinOrSpecialiste() || isAdmin()) {
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/consultations" routerLinkActive="active">
+          &#129658; Consultations
+        </a>
+      </li>
+    }
+
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/rendez-vous" routerLinkActive="active">
+        &#128197; Rendez-vous
+      </a>
+    </li>
+
+    @if (isMedecin() || isAdmin()) {
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/prescriptions" routerLinkActive="active">
+          &#128138; Prescriptions
+        </a>
+      </li>
+    }
+
+    @if (isAdmin()) {
+      <div class="px-3 mt-3 mb-1">
+        <small class="text-white-50 text-uppercase" style="font-size:10px;letter-spacing:1px">Administration</small>
+      </div>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/medecins" routerLinkActive="active">
+          &#129657; Médecins
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/services" routerLinkActive="active">
+          &#127973; Services
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/users" routerLinkActive="active">
+          &#128272; Utilisateurs
+        </a>
+      </li>
+    }
+  </ul>
+
+  <!-- Changer mot de passe + Logout -->
+  <div class="px-3 mt-2 d-flex flex-column gap-2">
+    <button class="btn btn-outline-light w-100 btn-sm" (click)="openChangePwdModal()">
+      &#128273; Changer mon mot de passe
+    </button>
+    <button class="btn btn-outline-light w-100 btn-sm" (click)="logout()">
+      &#9198; Déconnexion
+    </button>
+  </div>
+</nav>
+
+<!-- Modal changement de son propre mot de passe -->
+@if (showChangePwdModal()) {
+  <div class="modal fade show d-block" tabindex="-1" style="background:rgba(0,0,0,0.5);z-index:1055">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title">&#128273; Changer mon mot de passe</h5>
+          <button type="button" class="btn-close" (click)="closeChangePwdModal()"></button>
+        </div>
+
+        <div class="modal-body">
+          @if (pwdErrorMsg()) {
+            <div class="alert alert-danger py-2">{{ pwdErrorMsg() }}</div>
+          }
+          @if (pwdSuccessMsg()) {
+            <div class="alert alert-success py-2">{{ pwdSuccessMsg() }}</div>
+          }
+
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Mot de passe actuel <span class="text-danger">*</span></label>
+            <input type="password" class="form-control" [(ngModel)]="pwdForm.currentPassword"
+                   name="currentPassword" placeholder="Votre mot de passe actuel">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Nouveau mot de passe <span class="text-danger">*</span></label>
+            <input type="password" class="form-control" [(ngModel)]="pwdForm.newPassword"
+                   name="newPassword" placeholder="Min. 6 caractères">
+          </div>
+
+          <div class="mb-3">
+            <label class="form-label fw-semibold">Confirmer le mot de passe <span class="text-danger">*</span></label>
+            <input type="password" class="form-control" [(ngModel)]="pwdForm.confirm"
+                   name="confirmPassword" placeholder="Répéter le nouveau mot de passe">
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" (click)="closeChangePwdModal()">Annuler</button>
+          <button type="button" class="btn btn-primary" (click)="saveOwnPassword()" [disabled]="savingPwd()">
+            @if (savingPwd()) {
+              <span class="spinner-border spinner-border-sm me-1"></span>
+            }
+            Enregistrer
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+}

@@ -1,0 +1,52 @@
+<div class="page-content">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h4 class="fw-bold mb-0">&#128197; Rendez-vous</h4>
+    <a routerLink="/rendez-vous/new" class="btn btn-primary">&#43; Nouveau RDV</a>
+  </div>
+
+  <div class="card">
+    <div class="card-body p-0">
+      @if (loading()) {
+        <div class="text-center py-5"><div class="spinner-border text-primary"></div></div>
+      } @else if (rdvList().length === 0) {
+        <div class="text-center py-5 text-muted">
+          <div style="font-size:3rem">&#128197;</div>
+          <p>Aucun rendez-vous</p>
+        </div>
+      } @else {
+        <div class="table-responsive">
+          <table class="table table-hover mb-0">
+            <thead>
+              <tr><th>Patient</th><th>Médecin</th><th>Date & Heure</th><th>Motif</th><th>Statut</th><th>Actions</th></tr>
+            </thead>
+            <tbody>
+              @for (rdv of rdvList(); track rdv.id) {
+                <tr>
+                  <td class="fw-semibold">{{ rdv.patient.nom }} {{ rdv.patient.prenom }}</td>
+                  <td>Dr. {{ rdv.medecin.nom }} {{ rdv.medecin.prenom }}</td>
+                  <td>{{ rdv.dateRdv | date:'dd/MM/yyyy HH:mm' }}</td>
+                  <td>{{ rdv.motif || '-' }}</td>
+                  <td>
+                    <span class="badge {{ statutColors[rdv.statut] }}">{{ rdv.statut }}</span>
+                  </td>
+                  <td>
+                    <div class="btn-group btn-group-sm">
+                      @if (rdv.statut === 'PLANIFIE') {
+                        <button class="btn btn-outline-success btn-sm" (click)="updateStatut(rdv.id, 'CONFIRME')" title="Confirmer">&#10003;</button>
+                        <button class="btn btn-outline-danger btn-sm" (click)="updateStatut(rdv.id, 'ANNULE')" title="Annuler">&#10007;</button>
+                      }
+                      @if (rdv.statut === 'CONFIRME') {
+                        <button class="btn btn-outline-secondary btn-sm" (click)="updateStatut(rdv.id, 'TERMINE')" title="Terminer">&#10003;&#10003;</button>
+                      }
+                      <button class="btn btn-outline-danger btn-sm" (click)="delete(rdv.id)" title="Supprimer">&#128465;</button>
+                    </div>
+                  </td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      }
+    </div>
+  </div>
+</div>

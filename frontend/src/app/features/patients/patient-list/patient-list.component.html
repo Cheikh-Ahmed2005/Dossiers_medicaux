@@ -1,0 +1,97 @@
+<div class="page-content">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h4 class="fw-bold mb-0">&#128101; Gestion des Patients</h4>
+    @if (canCreate()) {
+      <a routerLink="/patients/new" class="btn btn-primary">
+        &#43; Nouveau Patient
+      </a>
+    }
+  </div>
+
+  <!-- Search -->
+  <div class="card mb-3">
+    <div class="card-body py-2">
+      <div class="input-group">
+        <span class="input-group-text">&#128269;</span>
+        <input type="text" class="form-control" placeholder="Rechercher par nom, prénom ou téléphone..."
+               [(ngModel)]="searchQuery" (input)="search()">
+        @if (searchQuery) {
+          <button class="btn btn-outline-secondary" (click)="searchQuery=''; load()">&#10005;</button>
+        }
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-body p-0">
+      @if (loading()) {
+        <div class="text-center py-5">
+          <div class="spinner-border text-primary"></div>
+        </div>
+      } @else if (patients().length === 0) {
+        <div class="text-center py-5 text-muted">
+          <div style="font-size:3rem">&#128101;</div>
+          <p>Aucun patient trouvé</p>
+        </div>
+      } @else {
+        <div class="table-responsive">
+          <table class="table table-hover mb-0">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Nom complet</th>
+                <th>Date de naissance</th>
+                <th>Sexe</th>
+                <th>Téléphone</th>
+                <th>Groupe sanguin</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              @for (patient of patients(); track patient.id) {
+                <tr>
+                  <td class="text-muted">{{ patient.id }}</td>
+                  <td>
+                    <div class="d-flex align-items-center">
+                      <div class="bg-primary text-white rounded-circle d-inline-flex align-items-center justify-content-center me-2" style="width:36px;height:36px;font-size:14px">
+                        {{ patient.nom[0] }}{{ patient.prenom[0] }}
+                      </div>
+                      <div>
+                        <div class="fw-semibold">{{ patient.nom }} {{ patient.prenom }}</div>
+                        <div class="text-muted small">{{ patient.adresse }}</div>
+                      </div>
+                    </div>
+                  </td>
+                  <td>{{ patient.dateNaissance | date:'dd/MM/yyyy' }}</td>
+                  <td>
+                    <span class="badge" [class]="patient.sexe === 'M' ? 'bg-primary' : 'bg-pink'" style="background-color:{{ patient.sexe === 'M' ? '#0d6efd' : '#d63384' }}">
+                      {{ patient.sexe === 'M' ? 'Masculin' : 'Féminin' }}
+                    </span>
+                  </td>
+                  <td>{{ patient.telephone }}</td>
+                  <td>
+                    @if (patient.groupeSanguin) {
+                      <span class="badge bg-danger">{{ patient.groupeSanguin }}</span>
+                    }
+                  </td>
+                  <td>
+                    <div class="btn-group btn-group-sm">
+                      <a [routerLink]="['/patients', patient.id]" class="btn btn-outline-primary" title="Voir dossier">&#128065;</a>
+                      <a [routerLink]="['/patients', patient.id, 'edit']" class="btn btn-outline-warning" title="Modifier">&#9999;</a>
+                      @if (canDelete()) {
+                        <button class="btn btn-outline-danger" (click)="delete(patient.id)" title="Supprimer">&#128465;</button>
+                      }
+                    </div>
+                  </td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+        <div class="px-3 py-2 text-muted small border-top">
+          {{ patients().length }} patient(s) trouvé(s)
+        </div>
+      }
+    </div>
+  </div>
+</div>
