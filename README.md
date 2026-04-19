@@ -39,12 +39,11 @@ ng serve
 
 ## Comptes de démonstration
 
-| Utilisateur | Mot de passe | Rôle        |
-|-------------|-------------|-------------|
-| admin       | password    | ADMIN       |
-| dr.martin   | password    | MEDECIN     |
-| assistant1  | password    | ASSISTANT   |
-| dr.dupont   | password    | SPECIALISTE |
+| Utilisateur            | Mot de passe | Rôle        |
+|------------------------|------------- |-------------|
+| admin@medical.com      | password1    | ADMIN       |
+-------------------------|--------------|-------------|
+
 
 ## Structure du projet
 
